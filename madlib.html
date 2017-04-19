@@ -1,10 +1,22 @@
 <html>
 <head>
-    <title>Madlib</title>
+    <title>Madlib - Celebrity Sighting</title>
 </head>
 <body>
     <p>One day in {{ city }}, {{ name }} ran into {{ celebrity }} on the street. They
-        {{ adverb }} {{ verb }} a {{ color }} {{ noun }} and then {{ adj }} {{ celebrity }} 
+        {{ adverb }} {{ verb }} a 
+
+        {%for col in color %}
+            {% if col == color[-1] %}
+                {{ col }}
+            {% elif col == color[-2] %}
+                {{ col }}, and
+            {% else %}
+                {{ col }},
+            {% endif %}
+        {% endfor%}
+
+         {{ noun }} and then {{ adj }} {{ celebrity }} 
         said, "You are so {{ compliment }}!"
 
 </p>
