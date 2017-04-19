@@ -27,13 +27,14 @@
         <input type="text" name="city"><br>
         Choose a celebrity:
         <select name="celebrity">
-            {% for celebrity in famous_people %}
-                <option value="celebrity">celebrity</option>
+            {% for celebrity in celebrities %}
+                <option value="{{ celebrity }}">{{ celebrity }}</option>
 <!--             <option value="Kanye">Kanye</option>
             <option value="Madonna">Madonna</option>
             <option value="Adele">Adele</option>
             <option value="Sia">Sia</option><br> -->
             {% endfor %}
+            <br>
         <input type="submit"></input>
     </form>
 </body>
