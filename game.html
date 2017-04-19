@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Madlibs</title>
+</head>
+<body>
+    <form action="/madlib">
+        Name a person: 
+        <input type="text" name="name"><br>
+        Pick a color: 
+        <select name="color">
+            <option value="purple">purple</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="green">green</option>
+            <option value="white">white</option>
+            <option value="black">black</option>
+        </select><br>
+        Enter a noun: 
+        <input type="text" name="noun"><br>
+        Give us an adjective: 
+        <input type="text" name="adj"><br>
+        Give us a verb: 
+        <input type="text" name="verb"><br>
+        Give us an adverb:
+        <input type="text" name="adverb"><br>
+        Name a city: 
+        <input type="text" name="city"><br>
+        Choose a celebrity:
+        <select name="celebrity">
+            {% for celebrity in famous_people %}
+                <option value="celebrity">celebrity</option>
+<!--             <option value="Kanye">Kanye</option>
+            <option value="Madonna">Madonna</option>
+            <option value="Adele">Adele</option>
+            <option value="Sia">Sia</option><br> -->
+            {% endfor %}
+        <input type="submit"></input>
+    </form>
+</body>
+</html>
